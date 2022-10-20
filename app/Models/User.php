@@ -58,4 +58,22 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function hasTeams()
+    {
+        return $this->allTeams()->count() > 0;
+    }
+
+    // Overrides
+
+    /**
+     * Determine if the given team is the current team.
+     *
+     * @param  mixed  $team
+     * @return bool
+     */
+    public function isCurrentTeam($team)
+    {
+        return $this->currentTeam ? $team->id === $this->currentTeam->id : false;
+    }
 }

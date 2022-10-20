@@ -5,7 +5,7 @@
 
     <div class="mt-8 text-2xl">
         Welcome to your Jetstream application!
-        <h5>{{ auth()->user()->currentTeam->name }}</h5>
+        <h5>{{ Auth::user()->currentTeam?->name }}</h5>
     </div>
 
     <div class="mt-6 text-gray-500">

@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/create-team', function () {
+    echo "damn";
+})->name('create-team')->middleware('password.confirm');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

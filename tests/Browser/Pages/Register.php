@@ -40,6 +40,8 @@ class Register extends Page
             '@email_field' => 'input[data-name="email-field"]',
             '@password_field' => 'input[data-name="password-field"]',
             '@password_confirmation_field' => 'input[data-name="password-confirmation-field"]',
+            '@submit_button' => 'button[data-role="submit"]',
+            '@terms' => 'input[data-name="terms"]',
         ];
     }
 }
