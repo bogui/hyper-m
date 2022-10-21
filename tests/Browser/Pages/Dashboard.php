@@ -37,7 +37,8 @@ class Dashboard extends Page
     {
         return [
             '@team_card' => '[data-name="team-card"]',
-            '@create_team_button' => '[data-name="create-team"]',
+            '@create_team_button' => 'a[data-name="create-team"]',
+            '@join_team_button' => 'button[data-name="join-team"]',
         ];
     }
 }
